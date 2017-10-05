@@ -7,6 +7,7 @@ import javax.inject.Singleton;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
+import io.reactivex.Observer;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Function;
 import uk.co.ribot.androidboilerplate.data.local.DatabaseHelper;
@@ -46,6 +47,10 @@ public class DataManager {
 
     public Observable<List<Ribot>> getRibots() {
         return mDatabaseHelper.getRibots().distinct();
+    }
+
+    public Observable<String> getUserName() {
+        return Observable.just("Kaushal");
     }
 
 }

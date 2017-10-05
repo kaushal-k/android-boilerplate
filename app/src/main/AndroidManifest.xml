@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.signin.SignInActivity"/>
+
         <service android:name=".data.SyncService"/>
 
         <receiver
